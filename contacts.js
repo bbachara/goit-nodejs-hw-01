@@ -1,10 +1,8 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-// Create contactsPath variable
-const contactsPath = path.join(__dirname, "contacts.json");
+const contactsPath = path.join(__dirname, "db", "contacts.json");
 
-// Function to read contacts from the file
 async function readContacts() {
   try {
     const data = await fs.readFile(contactsPath, "utf8");
@@ -15,7 +13,6 @@ async function readContacts() {
   }
 }
 
-// Function to write contacts to the file
 async function writeContacts(contacts) {
   try {
     await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
@@ -24,7 +21,6 @@ async function writeContacts(contacts) {
   }
 }
 
-// Existing functions
 async function listContacts() {
   return await readContacts();
 }
@@ -46,7 +42,6 @@ async function addContact(newContact) {
   await writeContacts(contacts);
 }
 
-// Export functions via module.exports
 module.exports = {
   listContacts,
   getContactById,
