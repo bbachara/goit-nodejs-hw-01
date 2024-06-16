@@ -57,5 +57,23 @@
     "name": "Mango",
     "email": "mango@gmail.com",
     "phone": "322-22-22"
+  },
+  {
+    "name": "Bartek",
+    "email": "bartek@gmail.com",
+    "phone": "433-33-33",
+    "id": "26ddcde3-66f2-410b-9bde-467abe3c1485"
+  },
+  {
+    "id": "62329b56-5ea7-4516-862a-bca54f8ad176",
+    "name": "John",
+    "email": "john@gmail.com",
+    "phone": "655-55-55"
+  },
+  {
+    "id": "3da55036-233a-4226-bc84-d61e3fd10470",
+    "name": "Rambo",
+    "email": "rambo@gmail.com",
+    "phone": "766-66-66"
   }
 ]

@@ -37,8 +37,11 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "add":
-      const newContact = { id, name, email, phone };
-      await addContact(newContact);
+      if (!name || !email || !phone) {
+        console.log("Please provide name, email and phone to add a contact.");
+        return;
+      }
+      const newContact = await addContact({ name, email, phone });
       console.log("Added new contact:");
       console.log(newContact);
       break;
